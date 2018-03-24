@@ -10,7 +10,7 @@ EthernetClient client;
 
 void setup() {
   //start serial port up
-  Serial.begin(9600)
+  Serial.begin(9600);
   //start ethernet connection
   if (Ethernet.begin(mac) == 0) {
     Serial.println("Failed to configure Ethernet using DHCP");
@@ -19,7 +19,7 @@ void setup() {
       ;
 }
 
-
+Serial.println(Ethernet.localIP());
 
 
 void loop() {
