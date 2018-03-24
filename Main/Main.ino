@@ -9,9 +9,18 @@ byte mac[] = {
 EthernetClient client;
 
 void setup() {
-  // put your setup code here, to run once:
-
+  //start serial port up
+  Serial.begin(9600)
+  //start ethernet connection
+  if (Ethernet.begin(mac) == 0) {
+    Serial.println("Failed to configure Ethernet using DHCP");
+    // no point in carrying on, so do nothing forevermore:
+    for(;;)
+      ;
 }
+
+
+
 
 void loop() {
   // put your main code here, to run repeatedly:
