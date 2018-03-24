@@ -44,16 +44,17 @@ void setup()
   }
 // print your local IP address:
 Serial.println(Ethernet.localIP());
-  
-// Switch on the backlight
-lcd.setBacklightPin(BACKLIGHT_PIN,POSITIVE);
-lcd.setBacklight(HIGH);
-lcd.home (); // go home
-lcd.print("Local IP is:");
-lcd.setCursor (0,1); 
-lcd.print(Ethernet.localIP());  
-}
+  }
 
 void loop()
 {
+  // Switch on the backlight
+  lcd.setBacklightPin(BACKLIGHT_PIN,POSITIVE);
+  lcd.setBacklight(HIGH);
+  lcd.home (); // go home
+  lcd.print("Local IP is:");
+  lcd.setCursor (0,1); 
+  lcd.print(Ethernet.localIP()); 
+
+  
 }
