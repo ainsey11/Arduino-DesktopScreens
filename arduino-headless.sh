@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SCREEN=3
+SCREEN=$RANDOM
 
-Xvfb :$SCREEN -nolisten tcp -screen :$SCREEN 1280x800x24 &
+Xvfb :$SCREEN -nolisten tcp -screen :$SCREEN 1024x768x24 &
 
 xvfb="$!"
 
