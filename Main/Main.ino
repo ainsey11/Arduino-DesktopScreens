@@ -4,6 +4,7 @@
 #include "LCD.h"
 #include "LiquidCrystal_I2C.h"
 
+char serverName[] = "checkip.dyndns.com"; // test web page server
 
 // Random Mac address
 byte mac[] = {
@@ -55,6 +56,6 @@ void loop()
   lcd.print("Local IP is:");
   lcd.setCursor (0,1); 
   lcd.print(Ethernet.localIP()); 
-
-  
+  delay(500);
+  lcd.home(); 
 }
