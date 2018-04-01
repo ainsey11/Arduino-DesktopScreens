@@ -66,17 +66,21 @@ void loop()
   lcd.setBacklightPin(BACKLIGHT_PIN,POSITIVE);
   lcd.setBacklight(HIGH);
   lcd.home (); // go home
-  lcd.print("Local IP is:");
-  lcd.setCursor (0,1); 
-  lcd.print(Ethernet.localIP()); 
-  delay(500);
-  lcd.home(); 
-  lcd.clear();
-  if (client.available()) {
+  //lcd.print("Local IP is:");
+  //lcd.setCursor (0,1); 
+  //lcd.print(Ethernet.localIP()); 
+  //delay(500);
+  //lcd.home(); 
+  //lcd.clear();
+//  if (client.available()) {
     char c = client.read();
     Serial.print(c);
     lcd.print(c);
     delay(500);
-  }
+    lcd.clear();
+    lcd.home();
+    lcd.print("Output:")
+    delay(250);
+  //}
 
 }
