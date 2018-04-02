@@ -1,4 +1,3 @@
-import sys
-import time
+# Set up the Arduino IP address
 
-$ArduinoName = ""
+ArduinoIP = "172.16.2.44"
