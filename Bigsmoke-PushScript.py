@@ -25,7 +25,7 @@ time.sleep(5)
 while True:
 	
 	#Current Time
-	Time = datetime.now().strftime('%H:%M:%S')
+	Time = datetime.now().strftime('%H:%M')
 	timeconnection = urllib2.urlopen('http://' + ArduinoIP + '?L1=Time+Is:' + '&L2=' + Time)
 	timeconnection.close()
 	print("Sent Time to Arduino")
