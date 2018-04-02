@@ -37,7 +37,7 @@ while True:
 	temp = str(float(tempreq.state))
 	conditionreq = openhab.get_item('weatherunderground_weather_9d9f927c_current_conditions')
 	condition = str(conditionreq.state)
-	openhabconnection =  urllib2.urlopen('http://' + ArduinoIP + '?L1=Outer+Conditions:' + '&L2=' + temp + 'C' + '+/+' + condition)
+	openhabconnection =  urllib2.urlopen('http://' + ArduinoIP + '?L1=Conditions:' + '&L2=' + temp + 'C' + '+/+' + condition)
 	openhabconnection.close()
 	print("Sent Temp to Arduino")
 	time.sleep(30)
